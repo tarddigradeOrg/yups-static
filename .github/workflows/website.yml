@@ -53,8 +53,8 @@ jobs:
       - name: Build, tag and push container
         id: build-push-image
         run: |
-          docker build . -t ghcr.io/tarddigradeOrg/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
-          docker push ghcr.io/tarddigradeOrg/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
+          docker build . -t ghcr.io/tarddigradeorg/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
+          docker push ghcr.io/tarddigradeorg/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
 
       - name: Render image version
         run: |
