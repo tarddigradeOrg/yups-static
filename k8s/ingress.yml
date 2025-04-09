@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: website-yups
+spec:
+  ingresClassName: haproxy
+  rules:
+  - host: www.yups.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: website-yups
+            port:
+              number: 80

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-yups
+  namespace: websites
+spec:
+  selector:
+    matchLabels:
+      app: website-yups
+  template:
+    metadata:
+      labels:
+        app: website-yups
+    spec:
+      containers:
+        - name: website-yups
+          image: psyskeletor/RENDER
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          resources:
+            limits:
+              cpu: 500m
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 64Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      imagePullSecrets:
+        - name: docker-login
