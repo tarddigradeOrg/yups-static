@@ -63,7 +63,7 @@ jobs:
       - name: Push rendered file to remote repo
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_ARENERO }}
         with:
           source_file: 'k8s/'
           destination_repo: 'NicolasTobias/arenero'
