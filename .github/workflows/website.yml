@@ -47,14 +47,14 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{github.actor}}
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build, tag and push container
         id: build-push-image
         run: |
-          docker build . -t ghcr.io/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
-          docker push ghcr.io/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
+          docker build . -t ghcr.io/tarddigradeOrg/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
+          docker push ghcr.io/tarddigradeOrg/yups-static/${{ env.DOCKER_METADATA_OUTPUT_TAGS }}
 
       - name: Render image version
         run: |
