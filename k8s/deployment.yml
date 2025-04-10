@@ -28,4 +28,4 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
       imagePullSecrets:
-        - name: docker-login
+        - name: github-login
