@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: website-yups
-          image: TarddigradeOrg/RENDER
+          image: ghcr.io/tarddigradeorg/yups-static/website-statics/RENDER
           imagePullPolicy: Always
           ports:
           - containerPort: 80
