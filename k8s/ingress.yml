@@ -5,7 +5,7 @@ metadata:
 spec:
   ingresClassName: haproxy
   rules:
-  - host: www.yups.com
+  - host: yups.com
     http:
       paths:
       - path: /

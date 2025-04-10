@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: website-yups
-          image: psyskeletor/RENDER
+          image: TarddigradeOrg/RENDER
           imagePullPolicy: Always
           ports:
           - containerPort: 80
